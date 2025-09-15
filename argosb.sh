@@ -1126,11 +1126,12 @@ echo "VPS系统：$op"
 echo "CPU架构：$cpu"
 echo "ArgoSB脚本未安装，开始安装…………" && sleep 2
 setenforce 0 >/dev/null 2>&1
-iptables -P INPUT ACCEPT >/dev/null 2>&1
-iptables -P FORWARD ACCEPT >/dev/null 2>&1
-iptables -P OUTPUT ACCEPT >/dev/null 2>&1
-iptables -F >/dev/null 2>&1
-netfilter-persistent save >/dev/null 2>&1
+echo "默认不修改防火墙，请自行放行相关端口" && sleep 2
+#iptables -P INPUT ACCEPT >/dev/null 2>&1
+#iptables -P FORWARD ACCEPT >/dev/null 2>&1
+#iptables -P OUTPUT ACCEPT >/dev/null 2>&1
+#iptables -F >/dev/null 2>&1
+#netfilter-persistent save >/dev/null 2>&1
 ins
 cip
 echo
